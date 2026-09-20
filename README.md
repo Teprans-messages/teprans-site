@@ -1,168 +1,204 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=7C3AED&height=200&section=header&text=Teprans&fontSize=80&fontColor=ffffff&fontAlignY=38&desc=Мессенджер+нового+поколения&descAlignY=60&descSize=20&descColor=D0BCFF" width="100%">
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,14,20,24,30&height=220&section=header&text=Teprans&fontSize=90&fontColor=ffffff&fontAlignY=38&desc=Messenger+of+the+New+Generation&descAlignY=60&descSize=22&descColor=D0BCFF&animation=fadeIn" width="100%">
 
-<br>
+<br/>
 
 [![Version](https://img.shields.io/badge/Version-1.0.0-7C3AED?style=for-the-badge&logo=android&logoColor=white)](https://github.com/Teprans-messages/teprans-messenger/releases)
-[![Platform](https://img.shields.io/badge/Platform-Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)](#)
-[![License](https://img.shields.io/badge/License-Private-red?style=for-the-badge&logo=lock&logoColor=white)](#)
-[![E2EE](https://img.shields.io/badge/Encryption-E2EE-blueviolet?style=for-the-badge&logo=shield&logoColor=white)](#)
-[![Free](https://img.shields.io/badge/Price-FREE-success?style=for-the-badge&logo=heart&logoColor=white)](#)
+[![Platform](https://img.shields.io/badge/Android-5.0+-3DDC84?style=for-the-badge&logo=android&logoColor=white)](#download)
+[![Encryption](https://img.shields.io/badge/E2EE-RSA+AES-blueviolet?style=for-the-badge&logo=gnuprivacyguard&logoColor=white)](#)
+[![Price](https://img.shields.io/badge/Price-FREE-success?style=for-the-badge&logo=heart&logoColor=white)](#download)
+[![CI/CD](https://img.shields.io/badge/CI%2FCD-GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)](#)
 
-<br>
+<br/>
+
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Space+Grotesk&weight=700&size=26&duration=2500&pause=800&color=C084FC&center=true&vCenter=true&repeat=true&width=620&height=50&lines=🔒+End-to-End+Encryption;🎤+Voice+Messages;📹+WebRTC+Video+Calls;👥+Groups+%26+Channels;😀+Stickers+%26+Emoji;🚀+Real-time+WebSocket)](https://git.io/typing-svg)
+
+<br/>
 
 <a href="https://github.com/Teprans-messages/teprans-messenger/releases/download/v1.0.0/teprans.apk">
-  <img src="https://img.shields.io/badge/📥_Download_APK-v1.0.0-7C3AED?style=for-the-badge" alt="Download">
+  <img src="https://img.shields.io/badge/⬇️_Download_APK_v1.0.0_(40_MB)-7C3AED?style=for-the-badge&logo=android&logoColor=white" alt="Download APK" height="45">
 </a>
 
-<br><br>
-
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Space+Grotesk&weight=700&size=28&duration=3000&pause=1000&color=C084FC&center=true&vCenter=true&multiline=true&repeat=true&width=600&height=100&lines=🔒+E2E+Шифрование;+🎤+Голосовые+сообщения;+📹+Видеозвонки+WebRTC;+👥+Группы+и+каналы)](https://git.io/typing-svg)
+<br/><br/>
 
 </div>
 
 ---
 
-## 💬 О Teprans
+## 💬 About Teprans
 
-**Teprans** — это быстрый, красивый и безопасный мессенджер для Android с полным E2E-шифрованием. Создан как альтернатива Telegram с акцентом на конфиденциальность и красоту интерфейса.
+**Teprans** — fast, beautiful and secure Android messenger with full **End-to-End Encryption**. Built as a modern alternative to Telegram with focus on privacy, performance, and stunning UI.
 
-> 📡 **Real-time** WebSocket общение с Redis Pub/Sub  
-> 🔒 **E2EE** RSA-2048 + AES-256 шифрование  
-> 📱 **Material 3** дизайн, фиолетовая тема  
-> ☁️ **S3** хранилище для медиафайлов  
-
----
-
-## ✨ Возможности
-
-<table>
-<tr>
-<td width="50%">
-
-### 🔒 Безопасность
-- End-to-End шифрование (RSA-2048 + AES-256)
-- JWT + Refresh Token аутентификация
-- 2FA через email OTP
-- Rate limiting + Helmet.js
-- Security headers + XSS защита
-
-### 📱 Андроид приложение
-- Material 3 + Jetpack Compose
-- Фиолетовая тема, тёмный режим
-- MVVM + Hilt DI + Room + DataStore
-- Анимации и плавные переходы
-- RU/EN локализация
-
-</td>
-<td width="50%">
-
-### 💬 Сообщения
-- Текст + изображения + видео + файлы
-- 🎤 Голосовые сообщения
-- 😀 Стикеры и emoji
-- ↩️ Reply (проведи для ответа)
-- Markdown (**bold**, *italic*, `code`)
-- ✓✓ Двойные галочки и read receipts
-- Push-уведомления (FCM)
-
-### 👥 Группы
-- Создание групп с много-выбором
-- Роли: Admin / Member
-- Ик участников (admin only)
-- Закрепление сообщений
-- Экран Group Info
-
-</td>
-</tr>
-</table>
+| | |
+|---|---|
+| 📡 **Real-time** | WebSocket + Redis Pub/Sub for instant delivery |
+| 🔒 **E2EE** | RSA-2048 + AES-256 per-message encryption |
+| 📱 **Material 3** | Jetpack Compose UI with purple theme |
+| ☁️ **Cloud Storage** | S3-compatible media file storage |
+| 🔔 **Push** | Firebase Cloud Messaging notifications |
+| 🌍 **Localization** | Full Russian & English support |
 
 ---
 
-## 🚀 Технологии
+## ✨ Features
+
+### 🔐 Security & Authentication
+- **End-to-End Encryption** — RSA-2048 key exchange + AES-256 message encryption
+- **JWT + Refresh Tokens** — secure session management
+- **2FA via Email OTP** — extra account protection
+- **Rate Limiting** — DDoS protection with express-rate-limit
+- **Security Headers** — Helmet.js, XSS-clean protection
+
+### 💬 Messaging
+- Text, images, video, audio, file attachments
+- 🎤 **Voice Messages** — hold to record, built-in player
+- 😀 **Sticker Picker** — emoji panel with large emoji render
+- ↩️ **Swipe to Reply** — reply to any message
+- **Markdown** — `**bold**`, `*italic*`, `` `code` ``, ~~strikethrough~~
+- ✓✓ **Read Receipts** — blue double checkmarks
+- 📌 **Pin Messages** — admins can pin important messages
+
+### 👥 Groups & Channels
+- Multi-select group creation with custom name
+- **Roles** — Admin / Member
+- **Admin controls** — kick members, add members
+- **Group Info screen** — member list with role badges
+- Leave group option
+
+### 📹 Calls
+- **Video Calls** — WebRTC peer-to-peer
+- **Audio Calls** — lightweight signaling via WebSocket
+- Camera/mic toggle buttons, hang up
+
+### 📱 Android App
+- **Material 3** + Jetpack Compose
+- Purple theme, full dark mode
+- **MVVM** + Hilt DI + Room + DataStore
+- Smooth animations, animated send button
+- Tab filtering: All / Personal / Groups
+- RU/EN language toggle in Settings
+
+---
+
+## 🛠️ Tech Stack
 
 <div align="center">
 
-### Backend
+**Backend**
+
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 ![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
 ![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
-![WebSocket](https://img.shields.io/badge/WebSocket-010101?style=for-the-badge&logo=socket.io&logoColor=white)
+![WebSocket](https://img.shields.io/badge/WebSocket-010101?style=for-the-badge&logo=socketdotio&logoColor=white)
 
-### Android
+**Android**
+
 ![Kotlin](https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge&logo=kotlin&logoColor=white)
 ![Jetpack Compose](https://img.shields.io/badge/Jetpack_Compose-4285F4?style=for-the-badge&logo=jetpackcompose&logoColor=white)
-![Material3](https://img.shields.io/badge/Material_3-757575?style=for-the-badge&logo=materialdesign&logoColor=white)
+![Material3](https://img.shields.io/badge/Material_3-7C3AED?style=for-the-badge&logo=materialdesign&logoColor=white)
 ![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
+![Room](https://img.shields.io/badge/Room_DB-3DDC84?style=for-the-badge&logo=android&logoColor=white)
 
-### DevOps
+**DevOps & Infrastructure**
+
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
-![AWS S3](https://img.shields.io/badge/S3_Storage-FF9900?style=for-the-badge&logo=amazons3&logoColor=white)
+![S3](https://img.shields.io/badge/S3_Storage-FF9900?style=for-the-badge&logo=amazons3&logoColor=white)
 ![PM2](https://img.shields.io/badge/PM2-2B037A?style=for-the-badge&logo=pm2&logoColor=white)
+![VPS](https://img.shields.io/badge/VPS_Server-black?style=for-the-badge&logo=linux&logoColor=white)
 
 </div>
 
 ---
 
-## 📥 Скачать
+## 📥 Download
 
 <div align="center">
 
-| Сведение | Значение |
-|---|---|
-| 📱 **Платформа** | Android 5.0+ |
-| 📦 **Размер** | 40 МБ |
-| 💜 **Версия** | v1.0.0 |
-| 💰 **Цена** | Бесплатно |
+| Info | Value |
+|:---|:---|
+| 📱 **Platform** | Android 5.0 (API 21)+ |
+| 📦 **APK Size** | 40 MB |
+| 💜 **Version** | v1.0.0 Stable |
+| 💰 **Price** | 100% Free |
+| 🔒 **Privacy** | E2E Encrypted |
 
-<br>
+<br/>
 
-[![Download APK](https://img.shields.io/badge/%E2%AC%87%EF%B8%8F_Download_Teprans_APK-v1.0.0-7C3AED?style=for-the-badge&logo=android)](https://github.com/Teprans-messages/teprans-messenger/releases/download/v1.0.0/teprans.apk)
+<a href="https://github.com/Teprans-messages/teprans-messenger/releases/download/v1.0.0/teprans.apk">
+  <img src="https://img.shields.io/badge/⬇️_DOWNLOAD_TEPRANS.APK-Click_Here-7C3AED?style=for-the-badge&logo=android&logoColor=white" height="50" alt="Download">
+</a>
 
-**Установка:**
-1. Нажми кнопку Download выше
-2. Открой файл `.apk` на телефоне
-3. Разреши установку из неизвестных источников в настройках
-4. 🚀 Пользуйся!
+<br/><br/>
+
+**How to install:**
+1. Tap the button above to download `teprans.apk`
+2. Open the downloaded file on your Android phone
+3. Allow installation from unknown sources if prompted
+4. Install and enjoy! 🚀
 
 </div>
 
 ---
 
-## 📊 Архитектура
+## 🏗️ Architecture
 
 ```
 teprans/
-├── android/                 # 📱 Android приложение (Kotlin + Compose)
-│   ├── ui/screens/          # Экраны: Chat, Groups, Settings...
-│   ├── data/repository/     # Репозитории: Auth, Chat, User
-│   └── firebase/            # FCM Push уведомления
-├── backend/                 # ⚙️ Node.js сервер
-│   ├── src/controllers/     # Auth, Chat, User контроллеры
-│   ├── src/websocket/       # WebSocket + Redis Pub/Sub
-│   └── src/db/              # PostgreSQL схема и миграции
-└── .github/workflows/       # ✅ CI/CD пайплайны
+├── 📱 android/                    # Android App (Kotlin + Jetpack Compose)
+│   ├── ui/
+│   │   ├── screens/               # ChatScreen, ChatListScreen, GroupInfoScreen...
+│   │   ├── viewmodel/             # ChatViewModel, SettingsViewModel...
+│   │   └── theme/                 # Material 3 purple theme
+│   ├── data/
+│   │   ├── api/                   # Retrofit API + WebSocketManager
+│   │   ├── repository/            # Auth, Chat, User repositories
+│   │   └── local/                 # Room DB entities & DAOs
+│   └── firebase/                  # FCM push notification service
+│
+├── ⚙️ backend/                    # Node.js Server
+│   ├── src/
+│   │   ├── controllers/           # authController, chatController, userController
+│   │   ├── routes/                # REST API routes
+│   │   ├── websocket/             # WebSocket handler + Redis Pub/Sub
+│   │   └── db/                   # PostgreSQL schema & migrations
+│   └── tests/                    # Jest unit tests
+│
+└── 🔄 .github/workflows/          # CI/CD Pipelines
+    ├── backend-ci.yml             # Node lint → test → audit
+    └── android-ci.yml            # Gradle build → unit tests → APK
 ```
 
 ---
 
-## 🛣️ Дорожная карта
+## 🛣️ Roadmap
 
-| Этап | Статус | Описание |
-|---|---|---|
-| **MVP** | ✅ Готово | Чаты, регистрация, JWT, WebSocket |
-| **Beta** | ✅ Готово | Группы, медиа, звонки, голосовые |
-| **Growth** | 🔜 План | Бизнес-аккаунты, боты, аналитика |
-| **Global** | 🔜 План | Desktop, 1M+ пользователей |
+| Phase | Status | Key Features |
+|:---|:---:|:---|
+| **MVP** | ✅ Done | Registration, login, 1-on-1 chats, WebSocket, JWT |
+| **Beta** | ✅ Done | Groups, media, voice messages, video calls, stickers, FCM |
+| **Growth** | 🔜 Planned | Business accounts, bots, analytics, desktop client |
+| **Global** | 🔜 Planned | 1M+ users, plugin store, advanced scaling |
+
+---
+
+## 🔒 Security Highlights
+
+- 🛡️ **Zero-knowledge server** — messages encrypted before leaving your device
+- 🔑 **Per-session keys** — unique RSA keypair generated on each login
+- 🚫 **No ads, no tracking** — your data stays yours
+- ⚡ **Rate limiting** — brute-force and DDoS protection built-in
+- 🔐 **Secure storage** — tokens in Android EncryptedSharedPreferences
 
 ---
 
 <div align="center">
 
-💬 **Teprans** — Общайся без границ 🚀
+**💬 Teprans — Connect without limits 🚀**
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=7C3AED&height=120&section=footer" width="100%">
+*Made with ❤️ by the Teprans team*
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,14,20,24,30&height=120&section=footer" width="100%">
 
 </div>
