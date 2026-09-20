@@ -1,23 +1,29 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,14,20,24,30&height=220&section=header&text=Teprans&fontSize=90&fontColor=ffffff&fontAlignY=38&desc=Messenger+of+the+New+Generation&descAlignY=60&descSize=22&descColor=D0BCFF&animation=fadeIn" width="100%">
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,14,20,24,30&height=220&section=header&text=Teprans&fontSize=90&fontColor=ffffff&fontAlignY=38&desc=Мессенджер+нового+поколения+•+Teprans+Messenger&descAlignY=60&descSize=20&descColor=D0BCFF&animation=fadeIn" width="100%">
 
 <br/>
 
-[![Version](https://img.shields.io/badge/Version-1.0.0-7C3AED?style=for-the-badge&logo=android&logoColor=white)](https://github.com/Teprans-messages/teprans-site/releases)
-[![Platform](https://img.shields.io/badge/Android-5.0+-3DDC84?style=for-the-badge&logo=android&logoColor=white)](#download)
-[![Encryption](https://img.shields.io/badge/E2EE-RSA+AES-blueviolet?style=for-the-badge&logo=gnuprivacyguard&logoColor=white)](#)
-[![Price](https://img.shields.io/badge/Price-FREE-success?style=for-the-badge&logo=heart&logoColor=white)](#download)
-[![Status](https://img.shields.io/badge/Status-Official_Release-2088FF?style=for-the-badge&logo=checkmarx&logoColor=white)](https://github.com/Teprans-messages/teprans-site/releases)
+# 💬 Мессенджер Тепранс (Teprans Messenger)
+
+### Быстрый, безопасный и современный мессенджер для Android с полным сквозным E2EE-шифрованием
 
 <br/>
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Space+Grotesk&weight=700&size=26&duration=2500&pause=800&color=C084FC&center=true&vCenter=true&repeat=true&width=620&height=50&lines=🔒+End-to-End+Encryption;🎤+Voice+Messages;📹+WebRTC+Video+Calls;👥+Groups+%26+Channels;😀+Stickers+%26+Emoji;🚀+Lightning+Fast+Experience)](https://git.io/typing-svg)
+[![Официальный релиз](https://img.shields.io/badge/Версия-1.0.0_Stable-7C3AED?style=for-the-badge&logo=android&logoColor=white)](https://github.com/Teprans-messages/teprans-site/releases)
+[![Платформа Android](https://img.shields.io/badge/Платформа-Android_5.0+-3DDC84?style=for-the-badge&logo=android&logoColor=white)](#-скачать-мессенджер-тепранс-на-андроид-apk)
+[![Шифрование E2EE](https://img.shields.io/badge/Шифрование-E2EE_RSA+AES-blueviolet?style=for-the-badge&logo=gnuprivacyguard&logoColor=white)](#-безопасность-и-приватность)
+[![Бесплатно](https://img.shields.io/badge/Цена-100%25_Бесплатно-success?style=for-the-badge&logo=heart&logoColor=white)](#-скачать-мессенджер-тепранс-на-андроид-apk)
+[![Без рекламы](https://img.shields.io/badge/Реклама-Отсутствует-orange?style=for-the-badge&logo=adblock&logoColor=white)](#)
+
+<br/>
+
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Space+Grotesk&weight=700&size=26&duration=2500&pause=800&color=C084FC&center=true&vCenter=true&repeat=true&width=650&height=50&lines=🔒+Сквозное+E2E-шифрование;⚡+Мгновенная+отправка+сообщений+0ms;🎤+Голосовые+сообщения+и+стикеры;📹+Видеозвонки+WebRTC;👥+Группы+с+ролями+администратора;🚀+Скорость+и+плавность+как+в+Telegram)](https://git.io/typing-svg)
 
 <br/>
 
 <a href="https://github.com/Teprans-messages/teprans-site/releases/download/v1.0.0/teprans.apk">
-  <img src="https://img.shields.io/badge/⬇️_Download_APK_v1.0.0_(42_MB)-7C3AED?style=for-the-badge&logo=android&logoColor=white" alt="Download APK" height="48">
+  <img src="https://img.shields.io/badge/⬇️_СКАЧАТЬ_ОФИЦИАЛЬНЫЙ_APK_TEPRANS_(42_МБ)-7C3AED?style=for-the-badge&logo=android&logoColor=white" alt="Скачать Тепранс APK" height="52">
 </a>
 
 <br/><br/>
@@ -26,93 +32,165 @@
 
 ---
 
-## 💬 About Teprans
-
-**Teprans** — fast, beautiful and secure Android messenger with full **End-to-End Encryption**. Built with focus on privacy, performance, and stunning modern UI.
-
-| | |
-|---|---|
-| 📡 **Real-time** | Instant WebSocket message delivery with zero lag |
-| 🔒 **E2EE** | RSA-2048 + AES-256 military-grade encryption |
-| 📱 **Material 3** | Beautiful purple theme with dark mode & smooth 60fps animations |
-| ☁️ **Media Cloud** | Fast photo, audio, and file sharing |
-| 🔔 **Push Notifications** | Instant alerts even when the app is closed |
-| 🌍 **Multi-language** | Full Russian & English language support |
+## 📌 Оглавление
+- [💬 О мессенджере Тепранс](#-о-мессенджере-тепранс)
+- [📥 Скачать APK (Прямая ссылка)](#-скачать-мессенджер-тепранс-на-андроид-apk)
+- [⚡ Почему Тепранс работает молниеносно](#-почему-тепранс-работает-молниеносно)
+- [✨ Возможности приложения](#-возможности-приложения)
+- [🔒 Безопасность и приватность](#-безопасность-и-приватность)
+- [📊 Сравнение Тепранс и других мессенджеров](#-сравнение-тепранс-и-других-мессенджеров)
+- [❓ Часто задаваемые вопросы (FAQ)](#-часто-задаваемые-вопросы-faq)
+- [English Summary](#-english-summary--about-teprans-messenger)
 
 ---
 
-## ✨ Features
+## 💬 О мессенджере Тепранс
 
-### 🔐 Security & Privacy
-- **End-to-End Encryption** — Only you and the recipient can read messages.
-- **Zero Knowledge** — No unencrypted chats or keys stored on servers.
-- **Two-Factor Authentication** — Extra account protection via secure OTP.
-- **Anti-DDoS Protection** — Advanced rate limiting & security shields.
+**Мессенджер Тепранс** (также известный как **Teprans Messenger**, **Теп ранс**) — это новое поколение мобильных приложений для быстрого и защищённого общения на смартфонах Android. 
 
-### 💬 Messaging Experience
-- **0ms Instant Sending** — Optimistic local rendering for zero perceived latency.
-- **Voice Messages** — One-tap high quality voice recording and instant playback.
-- **Stickers & Emoji** — Expressive emoji reactions and enlarged stickers.
-- **Swipe to Reply** — Intuitive reply gestures on any message bubble.
-- **Rich Markdown** — Full support for **bold**, *italic*, and `code` formatting.
-- **Read Receipts** — Real-time double blue checkmarks.
-- **Full-Screen Media Viewer** — Pinch-to-zoom photo viewer right inside chats.
+При разработке приложения главной целью было объединить **молниеносную скорость работы Telegram**, **максимальную приватность Signal** и **стильный интерфейс Material You (Material 3)**.
 
-### 👥 Groups & Communities
-- Multi-member group creation with custom avatars and names.
-- Admin management: roles, kick members, pin key announcements.
-- Group info viewer with active participant roles.
-
-### 📹 Crystal Clear Calls
-- WebRTC peer-to-peer audio & video calls.
-- Hardware-accelerated camera and microphone controls.
-
----
-
-## 📥 Download Official APK
-
-<div align="center">
-
-| Specification | Details |
+| Характеристика | Описание |
 |:---|:---|
-| 📱 **Platform** | Android 5.0 (API 21) or higher |
-| 📦 **File Format** | Standalone APK (`teprans.apk`) |
-| 💜 **Version** | v1.0.0 Stable (Latest) |
-| 💰 **Price** | 100% Free, No Ads |
-| 🔒 **Privacy** | E2E Encrypted |
+| 🚀 **Мгновенная отправка** | 0ms задержки благодаря локальному оптимистичному рендерингу сообщений |
+| 🔒 **Сквозное шифрование (E2EE)** | Военный стандарт RSA-2048 + AES-256 (сообщения не читаются сервером) |
+| 📱 **Material 3 дизайн** | Премиальная фиолетовая палитра, тёмная тема, 60fps анимации |
+| 🎤 **Голосовые и медиа** | Быстрая запись голоса в 1 клик, отправка фото, видео и файлов |
+| 👥 **Групповые чаты** | Создание групп, роли администраторов, закрепление важных сообщений |
+| 🌍 **Локализация** | Полный русский и английский интерфейс с переключением в 1 клик |
+
+---
+
+## 📥 Скачать мессенджер Тепранс на Андроид (APK)
+
+Официальная и проверенная версия приложения доступна для свободной загрузки:
+
+<div align="center">
+
+| Спецификация | Значение |
+|:---|:---|
+| 📱 **Операционная система** | Android 5.0 (Lollipop) и новее (Android 6, 7, 8, 9, 10, 11, 12, 13, 14, 15) |
+| 📦 **Формат файла** | Автономный пакет установки Android APK (`teprans.apk`) |
+| 💜 **Текущая версия** | **v1.0.0 Stable** (Официальный релиз) |
+| 💾 **Размер файла** | ~42.8 МБ |
+| 🛡️ **Проверка на вирусы** | Чистый APK, без рекламы, без трекеров, без вредоносного кода |
+| 💰 **Стоимость** | Полностью бесплатно |
 
 <br/>
 
 <a href="https://github.com/Teprans-messages/teprans-site/releases/download/v1.0.0/teprans.apk">
-  <img src="https://img.shields.io/badge/⬇️_CLICK_HERE_TO_DOWNLOAD_TEPRANS.APK-7C3AED?style=for-the-badge&logo=android&logoColor=white" height="52" alt="Download APK">
+  <img src="https://img.shields.io/badge/⬇️_НАЖМИТЕ_СЮДА_ЧТОБЫ_СКАЧАТЬ_TEPRANS.APK-7C3AED?style=for-the-badge&logo=android&logoColor=white" height="54" alt="Скачать Тепранс APK">
 </a>
 
 <br/><br/>
 
-### 📲 How to Install:
-1. Tap the **Download** button above to get `teprans.apk`.
-2. Open the downloaded file on your Android smartphone.
-3. If prompted, allow **"Install from unknown sources"** in your phone settings.
-4. Launch Teprans and start messaging! 🚀
+### 📲 Пошаговая инструкция по установке:
+1. **Скачайте** установочный файл `teprans.apk` по кнопке выше.
+2. **Откройте** скачанный файл в шторке уведомлений или в папке «Загрузки» на смартфоне.
+3. Если телефон запросит разрешение, нажмите **«Разрешить установку из этого источника»** (стандартная процедура для всех APK вне Google Play).
+4. Нажмите **«Установить»** и запустите мессенджер **Тепранс**! 🚀
 
 </div>
 
 ---
 
-## 🔒 Security Highlights
+## ⚡ Почему Тепранс работает молниеносно
 
-- 🛡️ **Zero-knowledge server** — messages are encrypted directly on your device.
-- 🔑 **Per-session keys** — dynamic keys for every active session.
-- 🚫 **No tracking, no telemetry** — your private data belongs only to you.
-- 🔐 **Secure device storage** — all local data protected with hardware-backed encryption.
+В последнем обновлении архитектура была полностью переработана под требования высокой производительности:
+
+1. **0ms Optimistic UI:**  
+   При нажатии кнопки «Отправить» сообщение мгновенно появляется в ленте чата, а фоновый WebSocket доставляет его адресату. Нет задержек ожидания ответа сервера.
+2. **Стабильные 60 FPS при скролле:**  
+   Все модели данных помечены `@Immutable`, предотвращая паразитные перерисовки Jetpack Compose. Списки чатов и лента сообщений прокручиваются идеально плавно.
+3. **Умное кэширование Coil & Redis:**  
+   Аватарки и фотографии кэшируются в оперативной памяти (25% RAM) и на диске (100 MB). Повторная загрузка медиа занимает 0 секунд.
+4. **WebSocket Heartbeat:**  
+   Постоянное поддержание сокета активным с интервалом пинга 25 секунд. Приложение мгновенно готово к передаче данных даже при переключении между Wi-Fi и мобильной сетью.
+
+---
+
+## ✨ Возможности приложения
+
+### 💬 Общение без барьеров
+- **Текстовые сообщения:** Markdown-форматирование (**жирный**, *курсив*, `код`).
+- **Голосовые сообщения:** Запись голоса в формате m4a и встроенный плеер прямо в чате.
+- **Стикеры и большие эмодзи:** Отдельная панель реакций для ярких эмоций.
+- **Ответы (Reply):** Свайпните любое сообщение вправо для быстрого цитирования.
+- **Статусы прочтения:** Две синие галочки при прочтении собеседником.
+- **Полноэкранный просмотр медиа:** Просмотр фото и картинок на весь экран с зумом.
+
+### 👥 Групповые чаты и администрирование
+- Создание групп с неограниченным количеством участников.
+- Назначение администраторов с правом управления чатом.
+- Закрепление сообщений в шапке группы.
+- Удаление нарушителей правил (Kick member).
+
+### 📹 Видеозвонки WebRTC
+- Прямые аудио- и видеозвонки точка-точка без прослушивания третьими сторонами.
+- Аппаратное ускорение видеокодеков.
+
+---
+
+## 🔒 Безопасность и приватность
+
+Ваша безопасность заложена в основу архитектуры:
+
+- 🛡️ **Сквозное E2E-шифрование:** Ключи шифрования хранятся только на вашем телефоне. Ни провайдер, ни серверы не имеют доступа к содержимому ваших переписок.
+- 🔑 **Двухфакторная аутентификация (2FA):** Поддержка Google Authenticator / TOTP для максимальной защиты входа.
+- 🚫 **Без рекламы и сбора данных:** Мы не продаём таргетинг и не анализируем ваш профиль.
+- 🔒 **Защищённое хранилище DataStore:** Токены и секретные ключи зашифрованы средствами Android Keystore.
+
+---
+
+## 📊 Сравнение Тепранс и других мессенджеров
+
+| Критерий | 💬 Тепранс (Teprans) | Telegram | WhatsApp |
+|:---|:---:|:---:|:---:|
+| **E2E-шифрование по умолчанию** | ✅ **Да (всегда)** | ❌ Нет (только в секретных чатах) | ✅ Да |
+| **Скорость отправки 0ms** | ✅ **Да (Optimistic UI)** | ✅ Да | ⚠️ Зависит от сети |
+| **Полное отсутствие рекламы** | ✅ **Да (100% чисто)** | ❌ Реклама в каналах | ⚠️ Планы интеграции |
+| **Приватность исходников сервера** | ✅ **Скрыты и защищены** | ❌ Серверный код закрыт | ❌ Закрыт |
+| **Удобный APK без Google Play** | ✅ **Прямой официальный файл** | ⚠️ Требуется поиск | ❌ Ограничено |
+| **Плавность интерфейса Material 3** | ✅ **Jetpack Compose 60fps** | ⚠️ Собственный движок | ❌ Старый интерфейс |
+
+---
+
+## ❓ Часто задаваемые вопросы (FAQ)
+
+### Что такое мессенджер Тепранс (Теп ранс)?
+> **Тепранс (Teprans)** — это защищённый бесплатный мессенджер для смартфонов на базе Android, поддерживающий обмен сообщениями, отправку медиа, голосовые сообщения и видеозвонки с обязательным E2E-шифрованием.
+
+### Где безопасно скачать официальный APK Тепранс?
+> Официальный и проверенный APK-файл размещён исключительно на этой странице в разделе [Релизы (Releases)](https://github.com/Teprans-messages/teprans-site/releases). Прямая ссылка для загрузки: [Скачать teprans.apk](https://github.com/Teprans-messages/teprans-site/releases/download/v1.0.0/teprans.apk).
+
+### Безопасен ли Тепранс для конфиденциальных бесед?
+> Да. В приложении применяется многоуровневая система безопасности: E2EE-шифрование сообщений (RSA-2048 + AES-256), двухфакторная авторизация и изоляция данных на уровне операционной системы Android.
+
+### Сколько стоит использование мессенджера?
+> Мессенджер Тепранс полностью бесплатен, не содержит встроенных покупок, подписок и баннерной рекламы.
+
+---
+
+## 🌐 English Summary / About Teprans Messenger
+
+**Teprans Messenger** is a next-generation Android instant messaging application designed for users who demand speed, privacy, and modern design.
+
+- **Download APK:** [Official Release v1.0.0](https://github.com/Teprans-messages/teprans-site/releases/download/v1.0.0/teprans.apk)
+- **Encryption:** End-to-End military-grade RSA-2048 and AES-256.
+- **Speed:** Instant message sending (0ms optimistic latency) powered by WebSocket and Redis.
+- **UI/UX:** Native Android Jetpack Compose with Material 3 theming.
+- **Platform:** Android 5.0+ (Lollipop to Android 15).
 
 ---
 
 <div align="center">
 
-**💬 Teprans — Connect without limits 🚀**
+### 🔍 Поисковые теги / Search Keywords
+*мессенджер тепранс, теп ранс, мессенджер теп ранс, teprans, teprans messenger, teprans apk, скачать тепранс, скачать теп ранс, безопасный мессенджер андроид, тепранс официальный сайт, teprans apk download, скачать мессенджер teprans бесплатно*
 
-*Official Release — Powered by the Teprans Team*
+<br/>
+
+**💬 Teprans — Общайся свободно, быстро и безопасно! 🚀**
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,14,20,24,30&height=120&section=footer" width="100%">
 
