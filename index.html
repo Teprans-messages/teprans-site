@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Teprans — Умный мессенджер нового поколения</title>
+<meta name="description" content="Teprans — быстрый, безопасный и красивый мессенджер для Android с E2E-шифрованием, группами, звонками и голосовыми сообщениями.">
+<meta name="keywords" content="teprans, мессенджер, android, чат, безопасный, E2EE, онлайн общение, звонки, группы">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Teprans — Мессенджер нового поколения">
+<meta property="og:description" content="E2E-шифрование, группы, звонки, голосовые сообщения — всё в одном приложении">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://teprans-messages.github.io/teprans-site">
+<meta name="theme-color" content="#6750A4">
+<link rel="canonical" href="https://teprans-messages.github.io/teprans-site">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Teprans",
+  "operatingSystem": "Android",
+  "applicationCategory": "CommunicationApplication",
+  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+  "description": "Teprans — быстрый и безопасный мессенджер"
+}
+</script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap');
+  
+  :root {
+    --bg-dark: #0f0c29;
+    --bg-gradient-1: #302b63;
+    --bg-gradient-2: #24243e;
+    --primary: #9b51e0;
+    --secondary: #bb6bd9;
+    --text: #ffffff;
+    --text-muted: #a0a0b0;
+    --glass: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text);
+    overflow-x: hidden;
+    background: linear-gradient(to bottom, var(--bg-dark), var(--bg-gradient-1), var(--bg-gradient-2));
+  }
+  
+  .aurora-bg {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    z-index: -1;
+    background: radial-gradient(circle at 50% 50%, rgba(155, 81, 224, 0.2), transparent 60%);
+    animation: aurora 10s infinite alternate;
+  }
+  @keyframes aurora {
+    0% { transform: scale(1) translate(0, 0); }
+    100% { transform: scale(1.5) translate(5%, 5%); }
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 5%;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--glass-border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .logo {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .nav-links a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  .nav-links a:hover { color: var(--secondary); }
+
+  .hero {
+    text-align: center;
+    padding: 6rem 1rem;
+  }
+  .hero h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, #fff, var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .hero p {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto 2rem;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+  }
+  .btn-primary {
+    background: linear-gradient(45deg, var(--primary), var(--secondary));
+    color: white;
+    box-shadow: 0 4px 15px rgba(155, 81, 224, 0.4);
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(155, 81, 224, 0.6);
+  }
+
+  .features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 4rem 5%;
+  }
+  
+  .card {
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(155, 81, 224, 0.2);
+  }
+  
+  .card-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  .card h3 { font-family: 'Space Grotesk', sans-serif; margin-bottom: 0.5rem; }
+  .card p { color: var(--text-muted); line-height: 1.6; }
+  
+  .lang-ru { display: block; }
+  .lang-en { display: none; }
+  
+  body.en .lang-ru { display: none; }
+  body.en .lang-en { display: block; }
+</style>
+</head>
+<body>
+<div class="aurora-bg"></div>
+
+<nav>
+  <div class="logo">Teprans 💬</div>
+  <div class="nav-links">
+    <a href="#features"><span class="lang-ru">Функции</span><span class="lang-en">Features</span></a>
+    <a href="#security"><span class="lang-ru">Безопасность</span><span class="lang-en">Security</span></a>
+    <a href="#download"><span class="lang-ru">Скачать</span><span class="lang-en">Download</span></a>
+  </div>
+  <button id="langToggle" class="btn btn-primary" style="padding: 0.5rem 1rem;">EN / RU</button>
+</nav>
+
+<section class="hero">
+  <h1><span class="lang-ru">Общение без границ</span><span class="lang-en">Communication without limits</span></h1>
+  <p><span class="lang-ru">Быстрый, безопасный и красивый мессенджер для Android с E2E-шифрованием, группами, звонками и голосовыми сообщениями.</span><span class="lang-en">Fast, secure, and beautiful messenger for Android with E2E encryption, groups, calls, and voice messages.</span></p>
+  <a href="https://github.com/Teprans-messages/teprans-messenger/releases/latest/download/teprans.apk" class="btn btn-primary"><span class="lang-ru">Скачать APK</span><span class="lang-en">Download APK</span></a>
+</section>
+
+<section id="features" class="features">
+  <div class="card">
+    <div class="card-icon">🔒</div>
+    <h3><span class="lang-ru">E2E Шифрование</span><span class="lang-en">E2E Encryption</span></h3>
+    <p><span class="lang-ru">Ваши сообщения видите только вы и адресат.</span><span class="lang-en">Only you and the recipient can see your messages.</span></p>
+  </div>
+  <div class="card">
+    <div class="card-icon">🎤</div>
+    <h3><span class="lang-ru">Голосовые сообщения</span><span class="lang-en">Voice Messages</span></h3>
+    <p><span class="lang-ru">Записывайте и отправляйте с одного нажатия.</span><span class="lang-en">Record and send with a single tap.</span></p>
+  </div>
+  <div class="card">
+    <div class="card-icon">👥</div>
+    <h3><span class="lang-ru">Группы и каналы</span><span class="lang-en">Groups & Channels</span></h3>
+    <p><span class="lang-ru">Создавайте сообщества с ролями админа.</span><span class="lang-en">Create communities with admin roles.</span></p>
+  </div>
+  <div class="card">
+    <div class="card-icon">📹</div>
+    <h3><span class="lang-ru">Видеозвонки</span><span class="lang-en">Video Calls</span></h3>
+    <p><span class="lang-ru">WebRTC звонки прямо в приложении.</span><span class="lang-en">WebRTC calls directly in the app.</span></p>
+  </div>
+  <div class="card">
+    <div class="card-icon">🚀</div>
+    <h3><span class="lang-ru">Молниеносно</span><span class="lang-en">Lightning Fast</span></h3>
+    <p><span class="lang-ru">Redis кластеринг и S3-хранилище.</span><span class="lang-en">Redis clustering and S3 storage.</span></p>
+  </div>
+  <div class="card">
+    <div class="card-icon">📱</div>
+    <h3><span class="lang-ru">Красивый Android UI</span><span class="lang-en">Beautiful Android UI</span></h3>
+    <p><span class="lang-ru">Material 3 дизайн, фиолетовая тема.</span><span class="lang-en">Material 3 design, purple theme.</span></p>
+  </div>
+</section>
+
+<script>
+  document.getElementById('langToggle').addEventListener('click', () => {
+    document.body.classList.toggle('en');
+  });
+</script>
+</body>
+</html>
