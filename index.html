@@ -3,227 +3,1077 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Teprans — Умный мессенджер нового поколения</title>
-<meta name="description" content="Teprans — быстрый, безопасный и красивый мессенджер для Android с E2E-шифрованием, группами, звонками и голосовыми сообщениями.">
-<meta name="keywords" content="teprans, мессенджер, android, чат, безопасный, E2EE, онлайн общение, звонки, группы">
+<title>Teprans — Мессенджер нового поколения</title>
+<meta name="description" content="Teprans — быстрый, безопасный и красивый мессенджер для Android с E2E-шифрованием, группами, звонками и голосовыми сообщениями. Скачай бесплатно!">
+<meta name="keywords" content="teprans, мессенджер, android, чат, безопасный, E2EE, шифрование, звонки, группы, голосовые сообщения, бесплатно">
 <meta name="robots" content="index, follow">
 <meta property="og:title" content="Teprans — Мессенджер нового поколения">
-<meta property="og:description" content="E2E-шифрование, группы, звонки, голосовые сообщения — всё в одном приложении">
+<meta property="og:description" content="E2E-шифрование, группы, видеозвонки, голосовые сообщения — всё в одном красивом приложении">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://teprans-messages.github.io/teprans-site">
-<meta name="theme-color" content="#6750A4">
+<meta property="og:image" content="https://teprans-messages.github.io/teprans-site/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#7C3AED">
 <link rel="canonical" href="https://teprans-messages.github.io/teprans-site">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "Teprans",
-  "operatingSystem": "Android",
+  "operatingSystem": "Android 5.0+",
   "applicationCategory": "CommunicationApplication",
   "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
-  "description": "Teprans — быстрый и безопасный мессенджер"
+  "description": "Teprans — быстрый и безопасный мессенджер с E2E-шифрованием",
+  "downloadUrl": "https://github.com/Teprans-messages/teprans-messenger/releases/download/v1.0.0/teprans.apk"
 }
 </script>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap');
-  
-  :root {
-    --bg-dark: #0f0c29;
-    --bg-gradient-1: #302b63;
-    --bg-gradient-2: #24243e;
-    --primary: #9b51e0;
-    --secondary: #bb6bd9;
-    --text: #ffffff;
-    --text-muted: #a0a0b0;
-    --glass: rgba(255, 255, 255, 0.05);
-    --glass-border: rgba(255, 255, 255, 0.1);
-  }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-  body {
-    margin: 0;
-    font-family: 'Inter', sans-serif;
-    background-color: var(--bg-dark);
-    color: var(--text);
-    overflow-x: hidden;
-    background: linear-gradient(to bottom, var(--bg-dark), var(--bg-gradient-1), var(--bg-gradient-2));
-  }
-  
-  .aurora-bg {
-    position: fixed;
-    top: 0; left: 0; width: 100vw; height: 100vh;
-    z-index: -1;
-    background: radial-gradient(circle at 50% 50%, rgba(155, 81, 224, 0.2), transparent 60%);
-    animation: aurora 10s infinite alternate;
-  }
-  @keyframes aurora {
-    0% { transform: scale(1) translate(0, 0); }
-    100% { transform: scale(1.5) translate(5%, 5%); }
-  }
+:root {
+  --primary: #7C3AED;
+  --primary-light: #9F67FF;
+  --primary-dark: #5B21B6;
+  --accent: #C084FC;
+  --bg: #05030F;
+  --bg2: #0D0A1E;
+  --bg3: #130D2B;
+  --glass: rgba(124,58,237,0.08);
+  --glass-border: rgba(124,58,237,0.25);
+  --text: #F3F0FF;
+  --text-muted: #9CA3AF;
+  --text-dim: #6B7280;
+  --success: #10B981;
+  --gradient: linear-gradient(135deg, #7C3AED 0%, #C084FC 50%, #7C3AED 100%);
+  --glow: 0 0 60px rgba(124,58,237,0.4);
+  --card-shadow: 0 25px 50px -12px rgba(0,0,0,0.6);
+}
 
-  nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 1.5rem 5%;
-    align-items: center;
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--glass-border);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  }
-  
-  .logo {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
+html { scroll-behavior: smooth; }
 
-  .nav-links {
-    display: flex;
-    gap: 2rem;
-  }
-  
-  .nav-links a {
-    color: var(--text);
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s;
-  }
-  .nav-links a:hover { color: var(--secondary); }
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
 
-  .hero {
-    text-align: center;
-    padding: 6rem 1rem;
-  }
-  .hero h1 {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 4rem;
-    margin-bottom: 1rem;
-    background: linear-gradient(45deg, #fff, var(--secondary));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  .hero p {
-    font-size: 1.2rem;
-    color: var(--text-muted);
-    max-width: 600px;
-    margin: 0 auto 2rem;
-  }
-  
-  .btn {
-    display: inline-block;
-    padding: 1rem 2rem;
-    border-radius: 50px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: transform 0.3s, box-shadow 0.3s;
-    border: none;
-    cursor: pointer;
-    font-size: 1.1rem;
-  }
-  .btn-primary {
-    background: linear-gradient(45deg, var(--primary), var(--secondary));
-    color: white;
-    box-shadow: 0 4px 15px rgba(155, 81, 224, 0.4);
-  }
-  .btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(155, 81, 224, 0.6);
-  }
+/* ===== CANVAS PARTICLES ===== */
+#particles-canvas {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
 
-  .features {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    padding: 4rem 5%;
-  }
-  
-  .card {
-    background: var(--glass);
-    border: 1px solid var(--glass-border);
-    border-radius: 20px;
-    padding: 2rem;
-    backdrop-filter: blur(10px);
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-  .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(155, 81, 224, 0.2);
-  }
-  
-  .card-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-  }
-  .card h3 { font-family: 'Space Grotesk', sans-serif; margin-bottom: 0.5rem; }
-  .card p { color: var(--text-muted); line-height: 1.6; }
-  
-  .lang-ru { display: block; }
-  .lang-en { display: none; }
-  
-  body.en .lang-ru { display: none; }
-  body.en .lang-en { display: block; }
+/* ===== AURORA ===== */
+.aurora {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.aurora-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  animation: float 15s ease-in-out infinite;
+}
+.aurora-orb:nth-child(1) {
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(124,58,237,0.35) 0%, transparent 70%);
+  top: -200px; left: -100px;
+  animation-delay: 0s;
+}
+.aurora-orb:nth-child(2) {
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(192,132,252,0.25) 0%, transparent 70%);
+  top: 30%; right: -150px;
+  animation-delay: -5s;
+}
+.aurora-orb:nth-child(3) {
+  width: 700px; height: 700px;
+  background: radial-gradient(circle, rgba(91,33,182,0.2) 0%, transparent 70%);
+  bottom: -200px; left: 30%;
+  animation-delay: -10s;
+}
+@keyframes float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -30px) scale(1.05); }
+  66% { transform: translate(-20px, 20px) scale(0.95); }
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 3px; }
+
+/* ===== NAV ===== */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 5%;
+  background: rgba(5,3,15,0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--glass-border);
+  transition: all 0.3s;
+}
+nav.scrolled {
+  padding: 0.7rem 5%;
+  background: rgba(5,3,15,0.95);
+  box-shadow: 0 4px 30px rgba(124,58,237,0.2);
+}
+.nav-logo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.5px;
+}
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+.nav-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.nav-links a:hover { color: var(--text); }
+.nav-right { display: flex; gap: 1rem; align-items: center; }
+.lang-btn {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  color: var(--text-muted);
+  padding: 0.4rem 0.9rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: all 0.3s;
+  font-family: 'Inter', sans-serif;
+}
+.lang-btn:hover { background: rgba(124,58,237,0.2); color: var(--text); }
+.btn-nav {
+  background: var(--primary);
+  color: white;
+  padding: 0.5rem 1.2rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.3s;
+  box-shadow: 0 0 20px rgba(124,58,237,0.4);
+}
+.btn-nav:hover {
+  background: var(--primary-light);
+  box-shadow: 0 0 30px rgba(124,58,237,0.7);
+  transform: translateY(-1px);
+}
+
+/* ===== SECTIONS ===== */
+section {
+  position: relative;
+  z-index: 1;
+  padding: 100px 5%;
+}
+
+/* ===== HERO ===== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 120px;
+  padding-bottom: 80px;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(124,58,237,0.15);
+  border: 1px solid rgba(124,58,237,0.4);
+  border-radius: 50px;
+  padding: 0.4rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 2rem;
+  animation: fadeInDown 0.8s ease;
+}
+.hero-badge-dot {
+  width: 8px; height: 8px;
+  background: var(--success);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.3); }
+}
+.hero h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -2px;
+  margin-bottom: 1.5rem;
+  animation: fadeInDown 0.8s ease 0.1s both;
+}
+.hero h1 span {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 200% 200%;
+  animation: gradientMove 3s ease infinite;
+}
+@keyframes gradientMove {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+.hero p {
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.7;
+  animation: fadeInDown 0.8s ease 0.2s both;
+}
+.hero-btns {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  animation: fadeInDown 0.8s ease 0.3s both;
+  margin-bottom: 4rem;
+}
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--primary);
+  color: white;
+  padding: 0.9rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: all 0.3s;
+  box-shadow: 0 0 40px rgba(124,58,237,0.5), var(--card-shadow);
+  position: relative;
+  overflow: hidden;
+}
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: -50%; left: -50%;
+  width: 200%; height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.6s;
+}
+.btn-primary:hover::before { transform: translateX(100%); }
+.btn-primary:hover {
+  background: var(--primary-light);
+  box-shadow: 0 0 60px rgba(124,58,237,0.8), var(--card-shadow);
+  transform: translateY(-3px);
+}
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  color: var(--text);
+  padding: 0.9rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s;
+  backdrop-filter: blur(10px);
+}
+.btn-secondary:hover {
+  background: rgba(124,58,237,0.2);
+  border-color: var(--primary);
+  transform: translateY(-3px);
+}
+
+/* Phone mockup */
+.phone-mockup {
+  position: relative;
+  width: 280px;
+  margin: 0 auto;
+  animation: floatPhone 4s ease-in-out infinite;
+}
+@keyframes floatPhone {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+.phone-frame {
+  width: 280px;
+  height: 560px;
+  background: linear-gradient(135deg, #1a0a3e, #2d1566);
+  border-radius: 45px;
+  border: 3px solid rgba(124,58,237,0.6);
+  padding: 20px;
+  box-shadow: 0 0 80px rgba(124,58,237,0.4), inset 0 0 30px rgba(124,58,237,0.1);
+  position: relative;
+  overflow: hidden;
+}
+.phone-frame::before {
+  content: '';
+  position: absolute;
+  top: 12px; left: 50%;
+  transform: translateX(-50%);
+  width: 100px; height: 20px;
+  background: #0a0520;
+  border-radius: 15px;
+}
+.phone-screen {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #0f0c29 0%, #1a0a3e 100%);
+  border-radius: 30px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.phone-header {
+  background: rgba(124,58,237,0.3);
+  padding: 40px 12px 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid rgba(124,58,237,0.2);
+}
+.phone-avatar {
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  background: var(--gradient);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+.phone-name { font-size: 12px; font-weight: 600; }
+.phone-status { font-size: 9px; color: var(--success); }
+.phone-messages {
+  flex: 1;
+  padding: 10px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.msg {
+  max-width: 75%;
+  padding: 6px 10px;
+  border-radius: 14px;
+  font-size: 10px;
+  line-height: 1.4;
+}
+.msg-in {
+  background: rgba(255,255,255,0.08);
+  border-bottom-left-radius: 4px;
+  align-self: flex-start;
+}
+.msg-out {
+  background: var(--primary);
+  border-bottom-right-radius: 4px;
+  align-self: flex-end;
+}
+.msg-time { font-size: 8px; opacity: 0.6; margin-top: 2px; text-align: right; }
+.phone-input {
+  padding: 8px;
+  border-top: 1px solid rgba(124,58,237,0.2);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.phone-input-field {
+  flex: 1;
+  background: rgba(255,255,255,0.06);
+  border-radius: 20px;
+  padding: 5px 10px;
+  font-size: 9px;
+  color: var(--text-muted);
+}
+.phone-send {
+  width: 24px; height: 24px;
+  background: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+}
+.glow-ring {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px; height: 350px;
+  border-radius: 50%;
+  border: 1px solid rgba(124,58,237,0.2);
+  animation: ringPulse 3s ease-in-out infinite;
+}
+.glow-ring:nth-child(2) { width: 420px; height: 420px; animation-delay: 0.5s; border-color: rgba(124,58,237,0.1); }
+.glow-ring:nth-child(3) { width: 490px; height: 490px; animation-delay: 1s; border-color: rgba(124,58,237,0.05); }
+@keyframes ringPulse {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+  50% { transform: translate(-50%, -50%) scale(1.05); opacity: 0.7; }
+}
+.phone-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeInDown 0.8s ease 0.4s both;
+}
+
+/* ===== STATS ===== */
+.stats-bar {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0;
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 0;
+  overflow: hidden;
+  backdrop-filter: blur(20px);
+  max-width: 900px;
+  margin: 0 auto;
+}
+.stat-item {
+  flex: 1;
+  min-width: 150px;
+  padding: 1.5rem;
+  text-align: center;
+  border-right: 1px solid var(--glass-border);
+  transition: background 0.3s;
+}
+.stat-item:last-child { border-right: none; }
+.stat-item:hover { background: rgba(124,58,237,0.1); }
+.stat-number {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.stat-label { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.2rem; }
+
+/* ===== FEATURES ===== */
+.section-title {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.section-title h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -1px;
+  margin-bottom: 1rem;
+}
+.section-title h2 span {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.section-title p { color: var(--text-muted); max-width: 500px; margin: 0 auto; font-size: 1.1rem; }
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.feature-card {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 2rem;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+}
+.feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--gradient);
+  transform: scaleX(0);
+  transition: transform 0.4s;
+}
+.feature-card:hover::before { transform: scaleX(1); }
+.feature-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(124,58,237,0.5);
+  box-shadow: 0 20px 60px rgba(124,58,237,0.2);
+  background: rgba(124,58,237,0.08);
+}
+.feature-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: block;
+  filter: drop-shadow(0 0 10px rgba(124,58,237,0.5));
+}
+.feature-card h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--text);
+}
+.feature-card p { color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; }
+
+/* ===== SECURITY ===== */
+.security-section {
+  background: var(--bg2);
+}
+.security-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+.security-visual {
+  position: relative;
+  text-align: center;
+}
+.shield {
+  font-size: 8rem;
+  filter: drop-shadow(0 0 40px rgba(124,58,237,0.6));
+  animation: shieldPulse 2s ease-in-out infinite;
+}
+@keyframes shieldPulse {
+  0%, 100% { filter: drop-shadow(0 0 40px rgba(124,58,237,0.6)); }
+  50% { filter: drop-shadow(0 0 70px rgba(192,132,252,0.8)); }
+}
+.security-text h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: -1px;
+}
+.security-text h2 span {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.security-text p { color: var(--text-muted); margin-bottom: 1.5rem; line-height: 1.8; }
+.security-list { list-style: none; }
+.security-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.5rem 0;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+.security-list li::before {
+  content: '✓';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px; height: 24px;
+  background: rgba(16,185,129,0.2);
+  border: 1px solid rgba(16,185,129,0.4);
+  border-radius: 50%;
+  color: var(--success);
+  font-size: 0.8rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* ===== DOWNLOAD ===== */
+.download-section {
+  text-align: center;
+  background: var(--bg3);
+}
+.download-card {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: 30px;
+  padding: 4rem 3rem;
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+.download-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(circle at 50% 0%, rgba(124,58,237,0.15) 0%, transparent 60%);
+  pointer-events: none;
+}
+.download-icon {
+  font-size: 5rem;
+  margin-bottom: 1.5rem;
+  filter: drop-shadow(0 0 30px rgba(124,58,237,0.5));
+}
+.download-card h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+.download-card p {
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+.download-info {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+.download-info-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+.version-badge {
+  display: inline-block;
+  background: rgba(16,185,129,0.2);
+  border: 1px solid rgba(16,185,129,0.4);
+  color: var(--success);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  position: relative;
+  z-index: 1;
+  background: rgba(0,0,0,0.5);
+  border-top: 1px solid var(--glass-border);
+  padding: 3rem 5% 2rem;
+}
+.footer-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 2rem;
+}
+.footer-logo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+}
+.footer-desc { color: var(--text-muted); font-size: 0.9rem; max-width: 300px; line-height: 1.6; }
+.footer-col h4 { font-size: 0.9rem; font-weight: 600; margin-bottom: 1rem; color: var(--text); }
+.footer-col ul { list-style: none; }
+.footer-col ul li { margin-bottom: 0.5rem; }
+.footer-col ul li a { color: var(--text-muted); text-decoration: none; font-size: 0.85rem; transition: color 0.3s; }
+.footer-col ul li a:hover { color: var(--accent); }
+.footer-bottom {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-top: 2rem;
+  border-top: 1px solid var(--glass-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.footer-bottom p { color: var(--text-dim); font-size: 0.8rem; }
+.footer-bottom a { color: var(--accent); text-decoration: none; }
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .security-content { grid-template-columns: 1fr; }
+  .security-visual { order: -1; }
+  .footer-content { grid-template-columns: 1fr; }
+  .stats-bar { flex-direction: column; }
+  .stat-item { border-right: none; border-bottom: 1px solid var(--glass-border); }
+  .stat-item:last-child { border-bottom: none; }
+}
 </style>
 </head>
 <body>
-<div class="aurora-bg"></div>
 
-<nav>
-  <div class="logo">Teprans 💬</div>
-  <div class="nav-links">
-    <a href="#features"><span class="lang-ru">Функции</span><span class="lang-en">Features</span></a>
-    <a href="#security"><span class="lang-ru">Безопасность</span><span class="lang-en">Security</span></a>
-    <a href="#download"><span class="lang-ru">Скачать</span><span class="lang-en">Download</span></a>
+<!-- Aurora background -->
+<div class="aurora">
+  <div class="aurora-orb"></div>
+  <div class="aurora-orb"></div>
+  <div class="aurora-orb"></div>
+</div>
+
+<!-- Canvas particles -->
+<canvas id="particles-canvas"></canvas>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="nav-logo">💬 Teprans</div>
+  <ul class="nav-links">
+    <li><a href="#features" data-ru="Возможности" data-en="Features">Возможности</a></li>
+    <li><a href="#security" data-ru="Безопасность" data-en="Security">Безопасность</a></li>
+    <li><a href="#download" data-ru="Скачать" data-en="Download">Скачать</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="lang-btn" id="langToggle" onclick="toggleLang()">EN</button>
+    <a href="#download" class="btn-nav" data-ru="📱 Скачать" data-en="📱 Download">📱 Скачать</a>
   </div>
-  <button id="langToggle" class="btn btn-primary" style="padding: 0.5rem 1rem;">EN / RU</button>
 </nav>
 
-<section class="hero">
-  <h1><span class="lang-ru">Общение без границ</span><span class="lang-en">Communication without limits</span></h1>
-  <p><span class="lang-ru">Быстрый, безопасный и красивый мессенджер для Android с E2E-шифрованием, группами, звонками и голосовыми сообщениями.</span><span class="lang-en">Fast, secure, and beautiful messenger for Android with E2E encryption, groups, calls, and voice messages.</span></p>
-  <a href="https://github.com/Teprans-messages/teprans-messenger/releases/latest/download/teprans.apk" class="btn btn-primary"><span class="lang-ru">Скачать APK</span><span class="lang-en">Download APK</span></a>
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-badge">
+    <span class="hero-badge-dot"></span>
+    <span data-ru="🚀 Версия 1.0.0 доступна" data-en="🚀 Version 1.0.0 available">🚀 Версия 1.0.0 доступна</span>
+  </div>
+  <h1>
+    <span data-ru="Общайся" data-en="Connect">Общайся</span><br>
+    <span data-ru="без границ" data-en="without limits">без границ</span>
+  </h1>
+  <p data-ru="Teprans — мессенджер нового поколения с E2E-шифрованием, голосовыми сообщениями, видеозвонками и красивым дизайном. Бесплатно для Android." data-en="Teprans — next-generation messenger with E2E encryption, voice messages, video calls and beautiful design. Free for Android.">Teprans — мессенджер нового поколения с E2E-шифрованием, голосовыми сообщениями, видеозвонками и красивым дизайном. Бесплатно для Android.</p>
+  <div class="hero-btns">
+    <a href="https://github.com/Teprans-messages/teprans-messenger/releases/download/v1.0.0/teprans.apk" class="btn-primary" data-ru="📥 Скачать APK" data-en="📥 Download APK">📥 Скачать APK</a>
+    <a href="#features" class="btn-secondary" data-ru="✨ Возможности" data-en="✨ Features">✨ Возможности</a>
+  </div>
+  <div class="phone-wrapper">
+    <div class="glow-ring"></div>
+    <div class="glow-ring"></div>
+    <div class="glow-ring"></div>
+    <div class="phone-mockup">
+      <div class="phone-frame">
+        <div class="phone-screen">
+          <div class="phone-header">
+            <div class="phone-avatar">👤</div>
+            <div>
+              <div class="phone-name">Alice</div>
+              <div class="phone-status">● online</div>
+            </div>
+          </div>
+          <div class="phone-messages">
+            <div class="msg msg-in">Привет! Как дела? 👋</div>
+            <div class="msg msg-out">Отлично! Пользуюсь Teprans 🚀
+              <div class="msg-time">18:42 ✓✓</div>
+            </div>
+            <div class="msg msg-in">Классное приложение! 🔥</div>
+            <div class="msg msg-out">Да, и шифрование E2E 🔒
+              <div class="msg-time">18:43 ✓✓</div>
+            </div>
+            <div class="msg msg-in">Уже скачал! 💜</div>
+          </div>
+          <div class="phone-input">
+            <div class="phone-input-field">Сообщение...</div>
+            <div class="phone-send">➤</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section id="features" class="features">
-  <div class="card">
-    <div class="card-icon">🔒</div>
-    <h3><span class="lang-ru">E2E Шифрование</span><span class="lang-en">E2E Encryption</span></h3>
-    <p><span class="lang-ru">Ваши сообщения видите только вы и адресат.</span><span class="lang-en">Only you and the recipient can see your messages.</span></p>
-  </div>
-  <div class="card">
-    <div class="card-icon">🎤</div>
-    <h3><span class="lang-ru">Голосовые сообщения</span><span class="lang-en">Voice Messages</span></h3>
-    <p><span class="lang-ru">Записывайте и отправляйте с одного нажатия.</span><span class="lang-en">Record and send with a single tap.</span></p>
-  </div>
-  <div class="card">
-    <div class="card-icon">👥</div>
-    <h3><span class="lang-ru">Группы и каналы</span><span class="lang-en">Groups & Channels</span></h3>
-    <p><span class="lang-ru">Создавайте сообщества с ролями админа.</span><span class="lang-en">Create communities with admin roles.</span></p>
-  </div>
-  <div class="card">
-    <div class="card-icon">📹</div>
-    <h3><span class="lang-ru">Видеозвонки</span><span class="lang-en">Video Calls</span></h3>
-    <p><span class="lang-ru">WebRTC звонки прямо в приложении.</span><span class="lang-en">WebRTC calls directly in the app.</span></p>
-  </div>
-  <div class="card">
-    <div class="card-icon">🚀</div>
-    <h3><span class="lang-ru">Молниеносно</span><span class="lang-en">Lightning Fast</span></h3>
-    <p><span class="lang-ru">Redis кластеринг и S3-хранилище.</span><span class="lang-en">Redis clustering and S3 storage.</span></p>
-  </div>
-  <div class="card">
-    <div class="card-icon">📱</div>
-    <h3><span class="lang-ru">Красивый Android UI</span><span class="lang-en">Beautiful Android UI</span></h3>
-    <p><span class="lang-ru">Material 3 дизайн, фиолетовая тема.</span><span class="lang-en">Material 3 design, purple theme.</span></p>
+<!-- STATS -->
+<section style="padding: 40px 5%;">
+  <div class="stats-bar reveal">
+    <div class="stat-item">
+      <div class="stat-number">E2EE</div>
+      <div class="stat-label" data-ru="Шифрование" data-en="Encryption">Шифрование</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">40MB</div>
+      <div class="stat-label" data-ru="Размер APK" data-en="APK size">Размер APK</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">99.9%</div>
+      <div class="stat-label" data-ru="Время работы" data-en="Uptime">Время работы</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">v1.0</div>
+      <div class="stat-label" data-ru="Версия" data-en="Version">Версия</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">Free</div>
+      <div class="stat-label" data-ru="Бесплатно" data-en="Forever free">Бесплатно</div>
+    </div>
   </div>
 </section>
+
+<!-- FEATURES -->
+<section id="features">
+  <div class="section-title reveal">
+    <h2 data-ru="Всё что тебе <span>нужно</span>" data-en="Everything you <span>need</span>">Всё что тебе <span>нужно</span></h2>
+    <p data-ru="Мощные функции в элегантном дизайне" data-en="Powerful features in an elegant design">Мощные функции в элегантном дизайне</p>
+  </div>
+  <div class="features-grid">
+    <div class="feature-card reveal">
+      <span class="feature-icon">🔒</span>
+      <h3 data-ru="E2E Шифрование" data-en="E2E Encryption">E2E Шифрование</h3>
+      <p data-ru="RSA-2048 + AES-256. Ваши сообщения видите только вы и адресат. Даже мы не можем их прочитать." data-en="RSA-2048 + AES-256. Only you and the recipient can read your messages. Even we cannot access them.">RSA-2048 + AES-256. Ваши сообщения видите только вы и адресат. Даже мы не можем их прочитать.</p>
+    </div>
+    <div class="feature-card reveal">
+      <span class="feature-icon">🎤</span>
+      <h3 data-ru="Голосовые сообщения" data-en="Voice Messages">Голосовые сообщения</h3>
+      <p data-ru="Записывай и отправляй голосовые сообщения одним нажатием. Встроенный плеер прямо в чате." data-en="Record and send voice messages with one press. Built-in player right in the chat.">Записывай и отправляй голосовые сообщения одним нажатием. Встроенный плеер прямо в чате.</p>
+    </div>
+    <div class="feature-card reveal">
+      <span class="feature-icon">👥</span>
+      <h3 data-ru="Группы и каналы" data-en="Groups & Channels">Группы и каналы</h3>
+      <p data-ru="Создавай группы с ролями (Admin/Member), добавляй и удаляй участников. Закрепляй важные сообщения." data-en="Create groups with roles (Admin/Member), add and remove members. Pin important messages.">Создавай группы с ролями (Admin/Member), добавляй и удаляй участников. Закрепляй важные сообщения.</p>
+    </div>
+    <div class="feature-card reveal">
+      <span class="feature-icon">📹</span>
+      <h3 data-ru="Видеозвонки" data-en="Video Calls">Видеозвонки</h3>
+      <p data-ru="WebRTC видеозвонки прямо в приложении без установки дополнительных программ." data-en="WebRTC video calls directly in the app without installing additional software.">WebRTC видеозвонки прямо в приложении без установки дополнительных программ.</p>
+    </div>
+    <div class="feature-card reveal">
+      <span class="feature-icon">🌍</span>
+      <h3 data-ru="Два языка" data-en="Two Languages">Два языка</h3>
+      <p data-ru="Полная поддержка русского и английского языков. Переключение в один клик в настройках." data-en="Full Russian and English language support. Switch with one click in settings.">Полная поддержка русского и английского языков. Переключение в один клик в настройках.</p>
+    </div>
+    <div class="feature-card reveal">
+      <span class="feature-icon">⚡</span>
+      <h3 data-ru="Мгновенная доставка" data-en="Instant Delivery">Мгновенная доставка</h3>
+      <p data-ru="WebSocket + Redis обеспечивают мгновенную доставку сообщений. Push-уведомления через FCM." data-en="WebSocket + Redis ensure instant message delivery. Push notifications via FCM.">WebSocket + Redis обеспечивают мгновенную доставку сообщений. Push-уведомления через FCM.</p>
+    </div>
+    <div class="feature-card reveal">
+      <span class="feature-icon">😀</span>
+      <h3 data-ru="Стикеры и эмодзи" data-en="Stickers & Emoji">Стикеры и эмодзи</h3>
+      <p data-ru="Встроенная панель стикеров и большие эмодзи для выразительного общения." data-en="Built-in sticker panel and large emoji for expressive communication.">Встроенная панель стикеров и большие эмодзи для выразительного общения.</p>
+    </div>
+    <div class="feature-card reveal">
+      <span class="feature-icon">🖼️</span>
+      <h3 data-ru="Медиафайлы" data-en="Media Files">Медиафайлы</h3>
+      <p data-ru="Отправляй фото, видео и файлы. Хранилище на S3 — надёжно и быстро." data-en="Send photos, videos and files. S3 storage — reliable and fast.">Отправляй фото, видео и файлы. Хранилище на S3 — надёжно и быстро.</p>
+    </div>
+    <div class="feature-card reveal">
+      <span class="feature-icon">💜</span>
+      <h3 data-ru="Красивый дизайн" data-en="Beautiful Design">Красивый дизайн</h3>
+      <p data-ru="Material 3 дизайн с фиолетовой темой. Тёмный режим, плавные анимации, удобный UX." data-en="Material 3 design with purple theme. Dark mode, smooth animations, great UX.">Material 3 дизайн с фиолетовой темой. Тёмный режим, плавные анимации, удобный UX.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECURITY -->
+<section id="security" class="security-section">
+  <div class="security-content">
+    <div class="security-visual reveal">
+      <div class="shield">🛡️</div>
+    </div>
+    <div class="security-text reveal">
+      <h2>Твоя <span>приватность</span> — наш приоритет</h2>
+      <p data-ru="Мы проектировали Teprans с нуля с учётом максимальной безопасности. Ни один сервер не хранит незашифрованные сообщения." data-en="We designed Teprans from scratch with maximum security in mind. No server stores unencrypted messages.">Мы проектировали Teprans с нуля с учётом максимальной безопасности. Ни один сервер не хранит незашифрованные сообщения.</p>
+      <ul class="security-list">
+        <li data-ru="RSA-2048 + AES-256 шифрование" data-en="RSA-2048 + AES-256 encryption">RSA-2048 + AES-256 шифрование</li>
+        <li data-ru="JWT + Refresh Token авторизация" data-en="JWT + Refresh Token authentication">JWT + Refresh Token авторизация</li>
+        <li data-ru="Rate limiting и защита от DDoS" data-en="Rate limiting and DDoS protection">Rate limiting и защита от DDoS</li>
+        <li data-ru="Security headers (Helmet.js)" data-en="Security headers (Helmet.js)">Security headers (Helmet.js)</li>
+        <li data-ru="HTTPS + SSL на всех соединениях" data-en="HTTPS + SSL on all connections">HTTPS + SSL на всех соединениях</li>
+        <li data-ru="Push-ключи только на твоём устройстве" data-en="Push keys only on your device">Push-ключи только на твоём устройстве</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- DOWNLOAD -->
+<section id="download" class="download-section">
+  <div class="download-card reveal">
+    <div class="download-icon">📱</div>
+    <div class="version-badge">✓ v1.0.0 Stable</div>
+    <h2 data-ru="Скачай Teprans сейчас" data-en="Download Teprans now">Скачай Teprans сейчас</h2>
+    <p data-ru="Бесплатно. Без рекламы. Без слежки. Android 5.0+" data-en="Free. No ads. No tracking. Android 5.0+">Бесплатно. Без рекламы. Без слежки. Android 5.0+</p>
+    <a href="https://github.com/Teprans-messages/teprans-messenger/releases/download/v1.0.0/teprans.apk" class="btn-primary" style="display:inline-flex; font-size:1.1rem; padding: 1rem 2.5rem;" data-ru="📥 Скачать APK (40 МБ)" data-en="📥 Download APK (40 MB)">📥 Скачать APK (40 МБ)</a>
+    <div class="download-info">
+      <div class="download-info-item">🤖 <span data-ru="Android 5.0+" data-en="Android 5.0+">Android 5.0+</span></div>
+      <div class="download-info-item">📦 <span data-ru="40 МБ" data-en="40 MB">40 МБ</span></div>
+      <div class="download-info-item">⭐ <span data-ru="Бесплатно" data-en="Free">Бесплатно</span></div>
+      <div class="download-info-item">🔒 <span data-ru="E2E Зашифровано" data-en="E2E Encrypted">E2E Зашифровано</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-content">
+    <div>
+      <div class="footer-logo">💬 Teprans</div>
+      <p class="footer-desc" data-ru="Мессенджер нового поколения. Быстро, безопасно, красиво." data-en="Next-generation messenger. Fast, secure, beautiful.">Мессенджер нового поколения. Быстро, безопасно, красиво.</p>
+    </div>
+    <div class="footer-col">
+      <h4 data-ru="Приложение" data-en="App">Приложение</h4>
+      <ul>
+        <li><a href="#features" data-ru="Возможности" data-en="Features">Возможности</a></li>
+        <li><a href="#security" data-ru="Безопасность" data-en="Security">Безопасность</a></li>
+        <li><a href="#download" data-ru="Скачать" data-en="Download">Скачать</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 data-ru="Разработка" data-en="Development">Разработка</h4>
+      <ul>
+        <li><a href="https://github.com/Teprans-messages" target="_blank">GitHub</a></li>
+        <li><a href="https://github.com/Teprans-messages/teprans-messenger/releases" target="_blank" data-ru="Релизы" data-en="Releases">Релизы</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Teprans. <span data-ru="Все права защищены." data-en="All rights reserved.">Все права защищены.</span></p>
+    <p data-ru="Сделано с ❤️ командой Teprans" data-en="Made with ❤️ by Teprans team">Сделано с ❤️ командой Teprans</p>
+  </div>
+</footer>
 
 <script>
-  document.getElementById('langToggle').addEventListener('click', () => {
-    document.body.classList.toggle('en');
+// ===== PARTICLES =====
+const canvas = document.getElementById('particles-canvas');
+const ctx = canvas.getContext('2d');
+let particles = [];
+
+function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+resizeCanvas();
+window.addEventListener('resize', resizeCanvas);
+
+function createParticle() {
+  return {
+    x: Math.random() * canvas.width,
+    y: Math.random() * canvas.height,
+    vx: (Math.random() - 0.5) * 0.4,
+    vy: (Math.random() - 0.5) * 0.4,
+    size: Math.random() * 2 + 0.5,
+    opacity: Math.random() * 0.5 + 0.1,
+    color: Math.random() > 0.5 ? '124,58,237' : '192,132,252'
+  };
+}
+
+for (let i = 0; i < 80; i++) particles.push(createParticle());
+
+function animateParticles() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  particles.forEach(p => {
+    p.x += p.vx; p.y += p.vy;
+    if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+    if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+    ctx.fillStyle = `rgba(${p.color},${p.opacity})`;
+    ctx.fill();
   });
+  // Draw connections
+  particles.forEach((p1, i) => {
+    particles.slice(i + 1).forEach(p2 => {
+      const d = Math.hypot(p1.x - p2.x, p1.y - p2.y);
+      if (d < 120) {
+        ctx.beginPath();
+        ctx.moveTo(p1.x, p1.y);
+        ctx.lineTo(p2.x, p2.y);
+        ctx.strokeStyle = `rgba(124,58,237,${0.1 * (1 - d/120)})`;
+        ctx.lineWidth = 0.5;
+        ctx.stroke();
+      }
+    });
+  });
+  requestAnimationFrame(animateParticles);
+}
+animateParticles();
+
+// ===== NAVBAR SCROLL =====
+window.addEventListener('scroll', () => {
+  const nav = document.getElementById('navbar');
+  if (window.scrollY > 50) nav.classList.add('scrolled');
+  else nav.classList.remove('scrolled');
+});
+
+// ===== SCROLL REVEAL =====
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// ===== LANGUAGE TOGGLE =====
+let lang = 'ru';
+function toggleLang() {
+  lang = lang === 'ru' ? 'en' : 'ru';
+  document.getElementById('langToggle').textContent = lang === 'ru' ? 'EN' : 'RU';
+  document.querySelectorAll('[data-ru]').forEach(el => {
+    const text = el.getAttribute('data-' + lang);
+    if (text) {
+      if (el.tagName === 'H2' && text.includes('<span>')) {
+        el.innerHTML = text;
+      } else {
+        el.textContent = text;
+      }
+    }
+  });
+}
+
+// ===== SMOOTH SCROLL =====
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+});
 </script>
 </body>
 </html>
