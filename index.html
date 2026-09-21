@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Teprans — Умный мессенджер нового поколения</title>
+<meta name="description" content="Teprans — быстрый, безопасный и красивый мессенджер для Android с E2E-шифрованием, группами, звонками и голосовыми сообщениями.">
+<meta name="theme-color" content="#6750A4">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Space+Grotesk:wght@700&display=swap');
+    
+    :root {
+        --primary: #6750A4;
+        --primary-glow: rgba(103, 80, 164, 0.6);
+        --bg: #05030F;
+        --glass: rgba(255, 255, 255, 0.03);
+        --glass-border: rgba(255, 255, 255, 0.08);
+        --text: #ffffff;
+        --text-muted: #a0a0b0;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+        font-family: 'Inter', sans-serif;
+        background-color: var(--bg);
+        color: var(--text);
+        overflow-x: hidden;
+        line-height: 1.6;
+    }
+
+    /* Animated Aurora Background */
+    .aurora-bg {
+        position: fixed;
+        top: 0; left: 0; width: 100vw; height: 100vh;
+        z-index: -1;
+        background: radial-gradient(circle at 15% 50%, rgba(103, 80, 164, 0.15), transparent 50%),
+                    radial-gradient(circle at 85% 30%, rgba(60, 40, 120, 0.15), transparent 50%);
+        animation: aurora 15s ease-in-out infinite alternate;
+    }
+    
+    @keyframes aurora {
+        0% { transform: scale(1); }
+        100% { transform: scale(1.1); }
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 24px 10%;
+        background: rgba(5, 3, 15, 0.5);
+        backdrop-filter: blur(20px);
+        border-bottom: 1px solid var(--glass-border);
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 100;
+    }
+
+    .logo {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        color: white;
+        text-decoration: none;
+    }
+
+    .nav-links a {
+        color: var(--text-muted);
+        text-decoration: none;
+        margin-left: 32px;
+        transition: color 0.3s;
+    }
+    
+    .nav-links a:hover { color: white; }
+
+    header {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0 20px;
+        margin-top: 60px;
+    }
+
+    h1 {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 64px;
+        line-height: 1.1;
+        margin-bottom: 24px;
+        background: linear-gradient(to right, #fff, #a0a0b0);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: fadeUp 1s ease-out;
+    }
+
+    .subtitle {
+        font-size: 20px;
+        color: var(--text-muted);
+        max-width: 600px;
+        margin-bottom: 48px;
+        animation: fadeUp 1.2s ease-out;
+    }
+
+    .cta-container {
+        display: flex;
+        gap: 20px;
+        animation: fadeUp 1.4s ease-out;
+    }
+
+    .btn {
+        padding: 16px 32px;
+        border-radius: 100px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.3s;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .btn-primary {
+        background: var(--primary);
+        color: white;
+        box-shadow: 0 0 20px var(--primary-glow);
+    }
+
+    .btn-primary:hover {
+        background: #7a5ec5;
+        box-shadow: 0 0 30px var(--primary-glow);
+        transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+        background: var(--glass);
+        color: white;
+        border: 1px solid var(--glass-border);
+    }
+
+    .btn-secondary:hover {
+        background: rgba(255, 255, 255, 0.1);
+        transform: translateY(-2px);
+    }
+
+    .features {
+        padding: 100px 10%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 32px;
+    }
+
+    .feature-card {
+        background: var(--glass);
+        border: 1px solid var(--glass-border);
+        border-radius: 24px;
+        padding: 40px;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .feature-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        background: rgba(255, 255, 255, 0.05);
+    }
+
+    .feature-icon {
+        font-size: 48px;
+        margin-bottom: 24px;
+    }
+
+    .feature-title {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+
+    .feature-desc {
+        color: var(--text-muted);
+    }
+
+    footer {
+        text-align: center;
+        padding: 40px;
+        border-top: 1px solid var(--glass-border);
+        color: var(--text-muted);
+        margin-top: 50px;
+    }
+
+    @keyframes fadeUp {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+        h1 { font-size: 40px; }
+        .cta-container { flex-direction: column; }
+        .nav-links { display: none; }
+    }
+</style>
+</head>
+<body>
+    <div class="aurora-bg"></div>
+    
+    <nav>
+        <a href="#" class="logo">Teprans 💬</a>
+        <div class="nav-links">
+            <a href="#features">Возможности</a>
+            <a href="#security">Безопасность</a>
+            <a href="#download">Скачать</a>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Мессенджер<br>Нового Поколения</h1>
+        <p class="subtitle">Быстрый, безопасный и невероятно красивый. Сквозное шифрование, группы, WebRTC звонки и голосовые сообщения — всё в одном лёгком приложении.</p>
+        <div class="cta-container">
+            <a href="https://github.com/Teprans-messages/teprans-messenger/releases/latest/download/app-release.apk" class="btn btn-primary" id="download">
+                ⬇️ Скачать APK (v1.1.2)
+            </a>
+            <a href="https://github.com/Teprans-messages/teprans-messenger" class="btn btn-secondary">
+                ⭐ GitHub
+            </a>
+        </div>
+    </header>
+
+    <section class="features" id="features">
+        <div class="feature-card">
+            <div class="feature-icon">🔒</div>
+            <h3 class="feature-title">E2E Шифрование</h3>
+            <p class="feature-desc">Ваши личные переписки защищены гибридным шифрованием (RSA+AES). Ключи хранятся только на вашем устройстве.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🚀</div>
+            <h3 class="feature-title">Молниеносный</h3>
+            <p class="feature-desc">Серверная архитектура на Node.js и Redis обеспечивает моментальную доставку сообщений через WebSocket.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">📹</div>
+            <h3 class="feature-title">WebRTC Звонки</h3>
+            <p class="feature-desc">Звоните друзьям по видео с кристально чистым звуком и стабильным P2P соединением.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🎤</div>
+            <h3 class="feature-title">Голосовые и Медиа</h3>
+            <p class="feature-desc">Делитесь моментами моментально. Мощный плеер для голосовых сообщений и встроенный просмотр фото.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">👥</div>
+            <h3 class="feature-title">Группы и Роли</h3>
+            <p class="feature-desc">Создавайте сообщества, назначайте админов, закрепляйте важные сообщения и удаляйте участников.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">✨</div>
+            <h3 class="feature-title">Material 3 Дизайн</h3>
+            <p class="feature-desc">Современный интерфейс Android на Jetpack Compose с поддержкой темной темы и плавными анимациями.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Teprans. Open Source Messenger.</p>
+    </footer>
+</body>
+</html>
