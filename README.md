@@ -23,7 +23,7 @@
 <br/>
 
 <a href="https://github.com/Teprans-messages/teprans-site/releases/download/v1.0.0/teprans.apk">
-  <img src="https://img.shields.io/badge/⬇️_СКАЧАТЬ_ОФИЦИАЛЬНЫЙ_APK_TEPRANS_(22_МБ)-7C3AED?style=for-the-badge&logo=android&logoColor=white" alt="Скачать Тепранс APK" height="52">
+  <img src="https://img.shields.io/badge/⬇️_СКАЧАТЬ_ОФИЦИАЛЬНЫЙ_APK_TEPRANS_(34_МБ)-7C3AED?style=for-the-badge&logo=android&logoColor=white" alt="Скачать Тепранс APK" height="52">
 </a>
 
 <br/><br/>
@@ -72,7 +72,7 @@
 | 📱 **Операционная система** | Android 5.0 (Lollipop) и новее (Android 6, 7, 8, 9, 10, 11, 12, 13, 14, 15) |
 | 📦 **Формат файла** | Автономный пакет установки Android APK (`teprans.apk`) |
 | 💜 **Текущая версия** | **v1.0.0 Stable** (Официальный релиз) |
-| 💾 **Размер файла** | ~22 МБ (Оптимизирован R8 / ProGuard) |
+| 💾 **Размер файла** | ~34 МБ (Полная сборка с WebRTC, Hilt и Compose) |
 | 🛡️ **Проверка на вирусы** | Чистый APK, без рекламы, без трекеров, без вредоносного кода |
 | 💰 **Стоимость** | Полностью бесплатно |
 
